@@ -1,4 +1,7 @@
 # YOLOv8_Explainer
+
+- Note: this is a fork from YOLOv8_Explainer to get bbox, CAM weight, and image with CAM
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Downloads](https://static.pepy.tech/badge/YOLOv8-Explainer)](https://pepy.tech/project/YOLOv8-Explainer)
 ## Simplify your understanding of YOLOv8 Results
@@ -13,7 +16,7 @@ This is a package with state of the art methods for Explainable AI for computer 
 To incorporate `YOLOv8-Explainer` into your project as a dependency, execute the following command in your terminal:
 
 ```bash
-pip install YOLOv8-Explainer
+pip install git+https://github.com/phuvinhnguyen/YOLOv8_Explainer.git
 ```
 
 ## Features and Functionality
