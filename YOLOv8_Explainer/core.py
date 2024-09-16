@@ -325,7 +325,11 @@ class yolov8_heatmap:
                 )
 
         cam_image = Image.fromarray(cam_image)
-        return cam_image
+        return {
+            'cam_image': cam_image,
+            'bbox': pred[:, :4],
+            'grayscale_cam': grayscale_cam,
+        }
 
     def __call__(self, img_path):
         """Generate CAM visualizations for one or more images.
