@@ -280,7 +280,7 @@ class yolov8_heatmap:
         Returns:
             None
         """
-        img = cv2.imread(img_path)
+        img = cv2.imread(img_path) if isinstance(img_path, str) else img_path
         img = letterbox(img)[0]
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         img = np.float32(img) / 255.0  # type: ignore
@@ -340,7 +340,7 @@ class yolov8_heatmap:
         Returns:
             None
         """
-        if os.path.isdir(img_path):
+        if isinstance(img_path, str) and os.path.isdir(img_path):
             image_list = []
             for img_path_ in os.listdir(img_path):
                 img_pil = self.process(f"{img_path}/{img_path_}")
